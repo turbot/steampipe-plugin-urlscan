@@ -24,8 +24,8 @@ github.com/dgraph-io/ristretto v0.0.3 h1:jh22xisGBjrEVnRZ1DVTpBVQm0Xndu8sMl0CWDz
 github.com/dgraph-io/ristretto v0.0.3/go.mod h1:KPxhHT9ZxKefz+PCeOGsrHpl1qZ7i70dGTu2u+Ahh6E=
 github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2 h1:tdlZCpZ/P9DhczCTSixgIKmwPv6+wP5DGjqLYw5SUiA=
 github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2/go.mod h1:SqUrOPUnsFjfmXRMNPybcSiG0BgUW2AuFH8PAnS2iTw=
-github.com/e-gineer/urlscan-go v1.0.1-0.20210627212101-15a0197a77b3 h1:9vK8ZvLnVW+oDzMez0G9SqcwaSCetknHmwrn/yoU39s=
-github.com/e-gineer/urlscan-go v1.0.1-0.20210627212101-15a0197a77b3/go.mod h1:lAk4LtC5Dwkv4UZYTwWlghjRnoR0BY3Eewcbyi7LvYI=
+github.com/e-gineer/urlscan-go v1.0.1-0.20210701205010-6cf8288d0d10 h1:CpIKx8DGjfD9WKNJBzPgr5bZ7Y8i6L4vMvVgRSWj/is=
+github.com/e-gineer/urlscan-go v1.0.1-0.20210701205010-6cf8288d0d10/go.mod h1:lAk4LtC5Dwkv4UZYTwWlghjRnoR0BY3Eewcbyi7LvYI=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.4/go.mod h1:6rpuAdCZL397s3pYoYcLgu1mIlRU8Am5FuJP05cCM98=

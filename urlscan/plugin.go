@@ -15,6 +15,9 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 			Schema:      ConfigSchema,
 		},
 		DefaultTransform: transform.FromGo(),
+		DefaultGetConfig: &plugin.GetConfig{
+			ShouldIgnoreError: isNotFoundError,
+		},
 		TableMap: map[string]*plugin.Table{
 			"urlscan_app":           tableURLScanApp(ctx),
 			"urlscan_asn":           tableURLScanAsn(ctx),

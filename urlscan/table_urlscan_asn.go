@@ -41,8 +41,11 @@ func listAsn(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (i
 		return nil, err
 	}
 	task := conn.ResultTask(scan)
-	err = task.Wait()
+	err = task.Get()
 	if err != nil {
+		if isNotFoundError(err) {
+			return nil, nil
+		}
 		plugin.Logger(ctx).Error("urlscan_asn.listAsn", "wait_error", err)
 		return nil, err
 	}
