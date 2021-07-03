@@ -5,7 +5,7 @@ icon_url: "/images/plugins/turbot/urlscan.svg"
 brand_color: "#D2624D"
 display_name: "urlscan.io"
 short_name: "urlscan"
-description: "Steampipe plugin for querying customers, products, invoices and more from urlscan.io."
+description: "Steampipe plugin to query URL scanning results including requests cookies, headers and more from urlscan.io."
 og_description: "Query urlscan.io with SQL! Open source CLI. No DB required."
 og_image: "/images/plugins/turbot/urlscan-social-graphic.png"
 ---
