@@ -40,7 +40,7 @@ Prerequisites:
 Clone:
 
 ```sh
-git clone git@github.com:turbot/steampipe-plugin-urlscan
+git clone https://github.com/turbot/steampipe-plugin-urlscan.git
 cd steampipe-plugin-urlscan
 ```
 
