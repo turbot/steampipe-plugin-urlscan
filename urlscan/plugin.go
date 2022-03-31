@@ -28,6 +28,7 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 			"urlscan_global":        tableURLScanGlobal(ctx),
 			"urlscan_ip":            tableURLScanIP(ctx),
 			"urlscan_link":          tableURLScanLink(ctx),
+			"urlscan_metadata":      tableURLScanMetadata(ctx),
 			"urlscan_protocol":      tableURLScanProtocol(ctx),
 			"urlscan_request":       tableURLScanRequest(ctx),
 			"urlscan_document_type": tableURLScanDocumentType(ctx),
