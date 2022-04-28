@@ -23,10 +23,8 @@ func connect(_ context.Context, d *plugin.QueryData) (*urlscan.Client, error) {
 
 	// But prefer the config
 	urlscanConfig := GetConfig(d.Connection)
-	if &urlscanConfig != nil {
-		if urlscanConfig.APIKey != nil {
-			apiKey = *urlscanConfig.APIKey
-		}
+	if urlscanConfig.APIKey != nil {
+		apiKey = *urlscanConfig.APIKey
 	}
 
 	if apiKey == "" {
