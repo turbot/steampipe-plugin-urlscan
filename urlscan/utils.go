@@ -7,7 +7,7 @@ import (
 
 	"github.com/m-mizutani/urlscan-go/urlscan"
 
-	"github.com/turbot/steampipe-plugin-sdk/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v3/plugin"
 )
 
 func connect(_ context.Context, d *plugin.QueryData) (*urlscan.Client, error) {
@@ -23,10 +23,8 @@ func connect(_ context.Context, d *plugin.QueryData) (*urlscan.Client, error) {
 
 	// But prefer the config
 	urlscanConfig := GetConfig(d.Connection)
-	if &urlscanConfig != nil {
-		if urlscanConfig.APIKey != nil {
-			apiKey = *urlscanConfig.APIKey
-		}
+	if urlscanConfig.APIKey != nil {
+		apiKey = *urlscanConfig.APIKey
 	}
 
 	if apiKey == "" {
