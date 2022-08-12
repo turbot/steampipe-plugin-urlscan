@@ -6,7 +6,7 @@ replace github.com/m-mizutani/urlscan-go => github.com/e-gineer/urlscan-go v1.0.
 
 require (
 	github.com/m-mizutani/urlscan-go v1.0.0
-	github.com/turbot/steampipe-plugin-sdk/v3 v3.3.1
+	github.com/turbot/steampipe-plugin-sdk/v3 v3.3.2
 )
 
 require (
