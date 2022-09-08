@@ -1,3 +1,10 @@
+## v0.3.0 [2022-09-09]
+
+_Dependencies_
+
+- Recompiled plugin with [steampipe-plugin-sdk v4.1.6](https://github.com/turbot/steampipe-plugin-sdk/blob/main/CHANGELOG.md#v416-2022-09-02) which includes several caching and memory management improvements. ([#17](https://github.com/turbot/steampipe-plugin-urlscan/pull/17))
+- Recompiled plugin with Go version `1.19`. ([#17](https://github.com/turbot/steampipe-plugin-urlscan/pull/17))
+
 ## v0.2.1 [2022-05-24]
 
 _Bug fixes_
