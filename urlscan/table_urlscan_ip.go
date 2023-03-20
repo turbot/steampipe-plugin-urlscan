@@ -3,9 +3,9 @@ package urlscan
 import (
 	"context"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin/transform"
+	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
 )
 
 func tableURLScanIP(ctx context.Context) *plugin.Table {
@@ -37,7 +37,7 @@ func tableURLScanIP(ctx context.Context) *plugin.Table {
 }
 
 func listIP(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	quals := d.KeyColumnQuals
+	quals := d.EqualsQuals
 	scan := quals["scan"].GetStringValue()
 	conn, err := connect(ctx, d)
 	if err != nil {

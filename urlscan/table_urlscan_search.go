@@ -5,9 +5,9 @@ import (
 
 	"github.com/m-mizutani/urlscan-go/urlscan"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin/transform"
+	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
 )
 
 func tableURLScanSearch(ctx context.Context) *plugin.Table {
@@ -38,7 +38,7 @@ func tableURLScanSearch(ctx context.Context) *plugin.Table {
 }
 
 func listSearch(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	quals := d.KeyColumnQuals
+	quals := d.EqualsQuals
 	query := quals["query"].GetStringValue()
 	conn, err := connect(ctx, d)
 	if err != nil {
