@@ -6,7 +6,7 @@ Use SQL to query URL scanning results including requests, cookies, headers and m
 
 - **[Get started →](https://hub.steampipe.io/plugins/turbot/urlscan)**
 - Documentation: [Table definitions & examples](https://hub.steampipe.io/plugins/turbot/urlscan/tables)
-- Community: [Slack Channel](https://steampipe.io/community/join)
+- Community: [Join #steampipe on Slack →](https://turbot.com/community/join)
 - Get involved: [Issues](https://github.com/turbot/steampipe-plugin-urlscan/issues)
 
 ## Quick start
