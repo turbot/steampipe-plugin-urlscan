@@ -1,12 +1,20 @@
-# Table: urlscan_server
+---
+title: "Steampipe Table: urlscan_server - Query OCI URLscan Servers using SQL"
+description: "Allows users to query URLscan Servers, specifically providing insights into server details and potential security vulnerabilities."
+---
 
-List all servers used by requests in the page of a given scan.
+# Table: urlscan_server - Query OCI URLscan Servers using SQL
 
-Note: A `scan` must be provided in all queries to this table.
+URLscan is a service within Oracle Cloud Infrastructure (OCI) that allows users to analyze and monitor the security of their web servers. It provides detailed information about the server, including IP addresses, locations, and security vulnerabilities. With URLscan, users can easily identify potential security threats and take appropriate actions to mitigate them.
+
+## Table Usage Guide
+
+The `urlscan_server` table provides detailed insights into the servers scanned by URLscan. As a security analyst, explore server-specific details through this table, including IP addresses, locations, and security vulnerabilities. Utilize this table to uncover potential security threats and take appropriate actions to mitigate them.
 
 ## Examples
 
 ### List servers
+Gain insights into the servers associated with a particular scan to understand its activity and usage. This can be useful for monitoring server performance, identifying potential issues, or tracking the impact of specific scans.
 
 ```sql
 select
@@ -20,6 +28,7 @@ order by
 ```
 
 ### Servers by country
+Explore which servers are associated with different countries. This is particularly useful for understanding the geographical distribution of your servers and identifying potential regional issues.
 
 ```sql
 select
