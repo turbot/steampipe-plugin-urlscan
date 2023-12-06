@@ -11,6 +11,9 @@ Urlscan is a free and open API and web interface for scanning and analyzing web 
 
 The `urlscan_ip` table provides insights into IP addresses associated with a scan in Urlscan. As a security analyst, explore details about these IP addresses through this table, including their geographical location, associated domain, and ASN details. Utilize it to uncover information about the IP addresses a website connects to, helping to identify potential security risks or malicious activity.
 
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
+
 ## Examples
 
 ### List IP addresses

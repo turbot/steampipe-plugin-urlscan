@@ -11,6 +11,9 @@ Urlscan is a tool that provides detailed analysis of websites and webpages. It s
 
 The `urlscan_search` table provides insights into the detailed analysis of websites and webpages using Urlscan. As a security analyst, explore specific details through this table, including website connections, malicious content, and associated metadata. Utilize it to uncover information about potential threats, malicious scripts, and other suspicious activities associated with the website.
 
+**Important Notes**
+- You must specify the `query` in the `where` clause to query this table.
+
 ## Examples
 
 ### List all scans for a given domain and it's subdomains

@@ -11,6 +11,9 @@ urlscan.io is a service that allows you to scan and analyze web pages to identif
 
 The `urlscan_certificate` table provides insights into SSL certificates associated with a scan in urlscan.io. As a security analyst, explore certificate-specific details through this table, including the issuer, subject, validity period, and associated metadata. Utilize it to uncover information about certificates, such as their validity, the organizations that issued them, and the organizations they were issued to.
 
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
+
 ## Examples
 
 ### List certificates found in the scan

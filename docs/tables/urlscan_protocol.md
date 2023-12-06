@@ -11,6 +11,9 @@ URLScan Protocol is a component of URLScan, a web security tool that restricts t
 
 The `urlscan_protocol` table provides insights into the network protocols used in HTTP requests during a scan in URLScan. As a security analyst, explore protocol-specific details through this table, including the types of protocols used, their frequency, and associated metadata. Utilize it to uncover information about the protocols, such as those frequently used in potentially harmful requests, and the correlation between protocol type and scan results.
 
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
+
 ## Examples
 
 ### List protocols

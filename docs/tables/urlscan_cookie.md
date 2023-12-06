@@ -11,6 +11,9 @@ Urlscan.io is a free service that analyzes websites and provides information abo
 
 The `urlscan_cookie` table provides insights into the cookies set during a urlscan.io scan. As a security analyst or web developer, you can explore cookie-specific details through this table, including cookie names, values, and associated domains. This table can be utilized to discover information about cookies, such as those related to tracking user behavior, the domains they are associated with, and the potential security implications of these cookies.
 
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
+
 ## Examples
 
 ### List cookies

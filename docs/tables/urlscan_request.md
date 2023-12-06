@@ -11,6 +11,9 @@ Urlscan is a tool used to analyze and scan websites for potential security threa
 
 The `urlscan_request` table provides insights into the HTTP requests made during the scanning process by Urlscan. As a Security Analyst, you can use this table to uncover detailed information about these requests, such as the method, URL, and headers. This can assist in identifying potential security threats and understanding the behavior of the scanned webpage.
 
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
+
 ## Examples
 
 ### List requests

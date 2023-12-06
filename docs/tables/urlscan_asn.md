@@ -1,15 +1,18 @@
 ---
-title: "Steampipe Table: urlscan_asn - Query OCI Urlscan ASN using SQL"
-description: "Allows users to query Autonomous System Numbers (ASNs) in OCI Urlscan, specifically providing insights into the network routing prefixes and the networks they belong to."
+title: "Steampipe Table: urlscan_asn - Query Urlscan ASN using SQL"
+description: "Allows users to query Autonomous System Numbers (ASNs) in Urlscan, specifically providing insights into the network routing prefixes and the networks they belong to."
 ---
 
-# Table: urlscan_asn - Query OCI Urlscan ASN using SQL
+# Table: urlscan_asn - Query Urlscan ASN using SQL
 
-An Autonomous System Number (ASN) is a unique identifier assigned to an Autonomous System (AS). ASNs are used by the Border Gateway Protocol (BGP) for routing traffic across the internet. In OCI Urlscan, ASNs provide insights into the network routing prefixes and the networks they belong to.
+An Autonomous System Number (ASN) is a unique identifier assigned to an Autonomous System (AS). ASNs are used by the Border Gateway Protocol (BGP) for routing traffic across the internet. In Urlscan, ASNs provide insights into the network routing prefixes and the networks they belong to.
 
 ## Table Usage Guide
 
-The `urlscan_asn` table provides insights into Autonomous System Numbers (ASNs) within OCI Urlscan. As a network engineer, explore ASN-specific details through this table, including the network routing prefixes and the networks they belong to. Utilize it to uncover information about ASNs, such as their associated networks, and the verification of routing prefixes.
+The `urlscan_asn` table provides insights into Autonomous System Numbers (ASNs) within Urlscan. As a network engineer, explore ASN-specific details through this table, including the network routing prefixes and the networks they belong to. Utilize it to uncover information about ASNs, such as their associated networks, and the verification of routing prefixes.
+
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
 
 ## Examples
 

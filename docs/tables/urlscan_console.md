@@ -1,15 +1,18 @@
 ---
-title: "Steampipe Table: urlscan_console - Query OCI Urlscan Console using SQL"
+title: "Steampipe Table: urlscan_console - Query Urlscan Console using SQL"
 description: "Allows users to query Urlscan Consoles, specifically providing insights into scan results, associated metadata, and related information."
 ---
 
-# Table: urlscan_console - Query OCI Urlscan Console using SQL
+# Table: urlscan_console - Query Urlscan Console using SQL
 
-Urlscan Console is a part of Oracle Cloud Infrastructure's security services. It allows users to perform security scans and provides detailed analysis of the scan results. The console aids in identifying security threats, vulnerabilities, and helps in maintaining the overall security posture of your OCI resources.
+Urlscan Console is a part of Oracle Cloud Infrastructure's security services. It allows users to perform security scans and provides detailed analysis of the scan results. The console aids in identifying security threats, vulnerabilities, and helps in maintaining the overall security posture of your resources.
 
 ## Table Usage Guide
 
-The `urlscan_console` table provides insights into the scan results within OCI's Urlscan Console. As a security analyst, explore scan-specific details through this table, including vulnerabilities, associated metadata, and related information. Utilize it to uncover information about potential threats and vulnerabilities, and to verify the security posture of your OCI resources.
+The `urlscan_console` table provides insights into the scan results within Urlscan Console. As a security analyst, explore scan-specific details through this table, including vulnerabilities, associated metadata, and related information. Utilize it to uncover information about potential threats and vulnerabilities, and to verify the security posture of your resources.
+
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
 
 ## Examples
 

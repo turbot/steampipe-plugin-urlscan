@@ -11,6 +11,9 @@ The Transport Layer Security (TLS) in urlscan provides details about the TLS cer
 
 The `urlscan_tls` table provides insights into the TLS certificates of a scanned target within urlscan. As a security analyst, explore detailed information about the certificates through this table, including the certificate's issuer, subject, validity, and more. Utilize it to uncover information about the security of the target, such as the validity of the certificates, the issuer's details, and the associated metadata.
 
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
+
 ## Examples
 
 ### List TLS protocols by count

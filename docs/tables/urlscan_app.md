@@ -1,15 +1,18 @@
 ---
-title: "Steampipe Table: urlscan_app - Query OCI UrlScan Apps using SQL"
+title: "Steampipe Table: urlscan_app - Query UrlScan Apps using SQL"
 description: "Allows users to query UrlScan Apps, specifically providing insights into app data including its associated tags, related URLs, and the app's overall popularity."
 ---
 
-# Table: urlscan_app - Query OCI UrlScan Apps using SQL
+# Table: urlscan_app - Query UrlScan Apps using SQL
 
-UrlScan is a service within Oracle Cloud Infrastructure (OCI) that allows users to scan and analyze web applications for potential security vulnerabilities. It provides a comprehensive view of the application's security posture, including details about associated tags, related URLs, and the app's overall popularity. UrlScan helps users stay informed about the health and performance of their web applications and take appropriate actions when predefined conditions are met.
+UrlScan is a service within that allows users to scan and analyze web applications for potential security vulnerabilities. It provides a comprehensive view of the application's security posture, including details about associated tags, related URLs, and the app's overall popularity. UrlScan helps users stay informed about the health and performance of their web applications and take appropriate actions when predefined conditions are met.
 
 ## Table Usage Guide
 
-The `urlscan_app` table provides insights into web applications within OCI UrlScan. As a security analyst, explore app-specific details through this table, including associated tags, related URLs, and the app's overall popularity. Utilize it to uncover information about apps, such as those with potential security vulnerabilities, the relationships between apps and URLs, and the verification of app popularity.
+The `urlscan_app` table provides insights into web applications within UrlScan. As a security analyst, explore app-specific details through this table, including associated tags, related URLs, and the app's overall popularity. Utilize it to uncover information about apps, such as those with potential security vulnerabilities, the relationships between apps and URLs, and the verification of app popularity.
+
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
 
 ## Examples
 

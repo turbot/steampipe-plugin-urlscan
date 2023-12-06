@@ -11,6 +11,9 @@ Urlscan is a service that scans and analyzes websites to identify malicious cont
 
 The `urlscan_document_type` table provides insights into the different types of documents that are part of the web pages scanned by Urlscan. As a cybersecurity analyst, explore document-specific details through this table, including the type, associated web page, and other pertinent information. Utilize it to uncover insights about the various types of documents present on a web page, aiding in the detection and mitigation of potential security threats.
 
+**Important Notes**
+- You must specify the `scan` in the `where` clause to query this table.
+
 ## Examples
 
 ### List document types
