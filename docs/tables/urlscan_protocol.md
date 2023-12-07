@@ -19,7 +19,7 @@ The `urlscan_protocol` table provides insights into the network protocols used i
 ### List protocols
 Explore which protocols are most frequently used in a specific scan to identify potential security risks or unusual network activity. This can help in understanding the network behavior and devise strategies for improved security.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -27,13 +27,24 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  count desc
+  count desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_protocol
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  count desc;
 ```
 
 ### Protocols by country
 Discover the segments that use different protocols, organized by country, to gain insights into internet usage patterns and potential security risks. This information can be useful for identifying areas of concern and optimizing network performance.
 
-```sql
+```sql+postgres
 select
   countries ->> 0 as country,
   protocol
@@ -43,5 +54,18 @@ where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
   country,
+  protocol;
+```
+
+```sql+sqlite
+select
+  json_extract(countries, '$[0]') as country,
   protocol
+from
+  urlscan_protocol
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  country,
+  protocol;
 ```

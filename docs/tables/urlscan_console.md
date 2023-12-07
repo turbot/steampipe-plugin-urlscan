@@ -19,7 +19,7 @@ The `urlscan_console` table provides insights into the scan results within Urlsc
 ### List console messages in order
 Analyze the sequence of console messages to gain insights into the progression of events for a specific scan. This can be useful for troubleshooting or understanding the behavior of a system.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -27,13 +27,24 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  rank
+  rank;
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_console
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  rank;
 ```
 
 ### List warnings and errors from the console
 Explore the instances where warnings and errors have been logged in a specific system scan. This query is useful in identifying potential issues and prioritizing them based on their severity for swift remediation.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -42,5 +53,17 @@ where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
   and level in ('warning', 'error')
 order by
-  rank
+  rank;
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_console
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+  and level in ('warning', 'error')
+order by
+  rank;
 ```

@@ -19,7 +19,7 @@ The `urlscan_document_type` table provides insights into the different types of 
 ### List document types
 Explore which document types are most prevalent in a specific scan, allowing you to identify potential threats or anomalies based on frequency. This can aid in strengthening your security measures by focusing on the most common document types.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -27,5 +27,16 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  count desc
+  count desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_document_type
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  count desc;
 ```

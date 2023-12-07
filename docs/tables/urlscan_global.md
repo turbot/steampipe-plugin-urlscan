@@ -19,7 +19,7 @@ The `urlscan_global` table provides insights into the global scan data within Ur
 ### List global variables
 Analyze the settings to understand the global variables associated with a particular scan. This can be useful for identifying potential areas of concern or improvement within a specific scan process.
 
-```sql
+```sql+postgres
 select
   property,
   type
@@ -28,5 +28,17 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  property
+  property;
+```
+
+```sql+sqlite
+select
+  property,
+  type
+from
+  urlscan_global
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  property;
 ```

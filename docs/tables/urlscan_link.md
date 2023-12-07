@@ -19,7 +19,7 @@ The `urlscan_link` table provides insights into the links scanned by Urlscan.io 
 ### List links found in the page
 Explore the specific links found within a webpage. This can be particularly useful in identifying potential security risks or understanding the structure and content of a website.
 
-```sql
+```sql+postgres
 select
   href,
   text
@@ -28,5 +28,17 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  href
+  href;
+```
+
+```sql+sqlite
+select
+  href,
+  text
+from
+  urlscan_link
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  href;
 ```

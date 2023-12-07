@@ -19,7 +19,7 @@ The `urlscan_domain` table provides insights into the domains within Urlscan. As
 ### List domains
 Explore which domains are associated with a specific scan in order to understand its reach and impact. This can be useful in identifying potential security threats or analyzing web traffic.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -27,13 +27,24 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  count desc
+  count desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_domain
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  count desc;
 ```
 
 ### Domains by country
 Discover the segments that categorize website domains by their respective countries, useful for understanding geographical distribution and focus of web content.
 
-```sql
+```sql+postgres
 select
   countries ->> 0 as country,
   domain
@@ -43,5 +54,18 @@ where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
   country,
+  domain;
+```
+
+```sql+sqlite
+select
+  json_extract(countries, '$[0]') as country,
   domain
+from
+  urlscan_domain
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  country,
+  domain;
 ```

@@ -19,7 +19,7 @@ The `urlscan_server` table provides detailed insights into the servers scanned b
 ### List servers
 Gain insights into the servers associated with a particular scan to understand its activity and usage. This can be useful for monitoring server performance, identifying potential issues, or tracking the impact of specific scans.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -27,13 +27,24 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  count desc
+  count desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_server
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  count desc;
 ```
 
 ### Servers by country
 Explore which servers are associated with different countries. This is particularly useful for understanding the geographical distribution of your servers and identifying potential regional issues.
 
-```sql
+```sql+postgres
 select
   countries ->> 0 as country,
   server
@@ -43,5 +54,18 @@ where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
   country,
+  server;
+```
+
+```sql+sqlite
+select
+  json_extract(countries, '$[0]') as country,
   server
+from
+  urlscan_server
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  country,
+  server;
 ```

@@ -19,11 +19,20 @@ The `urlscan_asn` table provides insights into Autonomous System Numbers (ASNs) 
 ### List ASNs
 Explore the Autonomous System Numbers (ASNs) related to a specific web scan. This is useful for identifying the networks involved in the scanned web activity, contributing to enhanced cybersecurity measures.
 
-```sql
+```sql+postgres
 select
   *
 from
   urlscan_asn
 where
-  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_asn
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
 ```

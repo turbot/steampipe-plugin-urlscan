@@ -19,11 +19,20 @@ The `urlscan_cookie` table provides insights into the cookies set during a urlsc
 ### List cookies
 Explore which cookies are associated with a specific web scan to understand potential tracking or privacy concerns. This can be useful in assessing the security measures of a website or identifying suspicious activity.
 
-```sql
+```sql+postgres
 select
   *
 from
   urlscan_cookie
 where
-  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_cookie
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
 ```

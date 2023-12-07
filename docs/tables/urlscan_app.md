@@ -19,11 +19,20 @@ The `urlscan_app` table provides insights into web applications within UrlScan. 
 ### List detected apps
 Explore which applications have been detected by analyzing the results of a specific scan. This could be useful in identifying potential security threats or understanding the software landscape of a system.
 
-```sql
+```sql+postgres
 select
   *
 from
   urlscan_app
 where
-  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_app
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
 ```

@@ -19,11 +19,20 @@ The `urlscan_task` table provides insights into tasks within Urlscan. As a secur
 ### Get task information
 Explore detailed information about a specific task, such as its status, duration, and associated metadata. This is useful for tracking the progress and outcome of individual tasks, enabling efficient monitoring and management.
 
-```sql
+```sql+postgres
 select
   *
 from
   urlscan_task
 where
-  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_task
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09';
 ```

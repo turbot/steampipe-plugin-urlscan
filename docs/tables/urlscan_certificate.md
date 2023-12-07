@@ -19,7 +19,7 @@ The `urlscan_certificate` table provides insights into SSL certificates associat
 ### List certificates found in the scan
 Explore the validity of certificates identified in a specific scan. This query helps to track the expiration date of each certificate, allowing you to manage and update them before they expire.
 
-```sql
+```sql+postgres
 select
   subject_name,
   issuer,
@@ -30,5 +30,19 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  valid_to
+  valid_to;
+```
+
+```sql+sqlite
+select
+  subject_name,
+  issuer,
+  valid_to,
+  (julianday(valid_to) - julianday(date('now'))) as days_until_expiration
+from
+  urlscan_certificate
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  valid_to;
 ```

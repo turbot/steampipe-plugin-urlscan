@@ -19,7 +19,7 @@ The `urlscan_tls` table provides insights into the TLS certificates of a scanned
 ### List TLS protocols by count
 Determine the frequency of different TLS protocols for a specific scan to analyze security measures. This can be crucial in identifying potential vulnerabilities and ensuring robust security protocols are in place.
 
-```sql
+```sql+postgres
 select
   p.key as protocol,
   p.value as count
@@ -29,5 +29,18 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  count desc
+  count desc;
+```
+
+```sql+sqlite
+select
+  p.key as protocol,
+  p.value as count
+from
+  urlscan_tls as t,
+  json_each(t.protocols) as p
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  count desc;
 ```

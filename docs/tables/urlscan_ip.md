@@ -19,7 +19,7 @@ The `urlscan_ip` table provides insights into IP addresses associated with a sca
 ### List IP addresses
 Explore the IP addresses associated with a particular scan to understand its reach and impact. This can be used to determine potential security threats or anomalies in the network traffic.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -27,13 +27,24 @@ from
 where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
-  count desc
+  count desc;
+```
+
+```sql+sqlite
+select
+  *
+from
+  urlscan_ip
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  count desc;
 ```
 
 ### IPs by country
 Explore which IP addresses are associated with specific countries to enhance your understanding of your network's geographical distribution. This could be crucial for detecting unusual activity or potential security threats.
 
-```sql
+```sql+postgres
 select
   countries ->> 0 as country,
   ip
@@ -43,13 +54,26 @@ where
   scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
 order by
   country,
+  ip;
+```
+
+```sql+sqlite
+select
+  json_extract(countries, '$[0]') as country,
   ip
+from
+  urlscan_ip
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  country,
+  ip;
 ```
 
 ### IPs with Geolocation
 Explore the geographical locations associated with specific IP addresses. This is useful for identifying patterns or anomalies in network traffic, potentially highlighting security threats or operational issues.
 
-```sql
+```sql+postgres
 select
   geolocation ->> 'country_name' as country,
   geolocation ->> 'region' as region,
@@ -63,5 +87,22 @@ order by
   country,
   region,
   city,
+  ip;
+```
+
+```sql+sqlite
+select
+  json_extract(geolocation, '$.country_name') as country,
+  json_extract(geolocation, '$.region') as region,
+  json_extract(geolocation, '$.city') as city,
   ip
+from
+  urlscan_ip
+where
+  scan = '54c78f69-5294-4a17-8ae0-a71943954e09'
+order by
+  country,
+  region,
+  city,
+  ip;
 ```
