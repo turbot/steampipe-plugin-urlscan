@@ -8,6 +8,7 @@ short_name: "urlscan"
 description: "Steampipe plugin to query URL scanning results including requests cookies, headers and more from urlscan.io."
 og_description: "Query urlscan.io with SQL! Open source CLI. No DB required."
 og_image: "/images/plugins/turbot/urlscan-social-graphic.png"
+engines: ["steampipe", "sqlite", "postgres", "export"]
 ---
 
 # urlscan.io + Steampipe
