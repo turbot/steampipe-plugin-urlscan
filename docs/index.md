@@ -99,7 +99,4 @@ connection "urlscan" {
 
 - `api_key` - Your urlscan.io API key.
 
-## Get involved
 
-- Open source: https://github.com/turbot/steampipe-plugin-urlscan
-- Community: [Join #steampipe on Slack →](https://turbot.com/community/join)
