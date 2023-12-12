@@ -8,13 +8,14 @@ short_name: "urlscan"
 description: "Steampipe plugin to query URL scanning results including requests cookies, headers and more from urlscan.io."
 og_description: "Query urlscan.io with SQL! Open source CLI. No DB required."
 og_image: "/images/plugins/turbot/urlscan-social-graphic.png"
+engines: ["steampipe", "sqlite", "postgres", "export"]
 ---
 
 # urlscan.io + Steampipe
 
 [urlscan.io](https://urlscan.io) is a website scanner to gather request, cookie, link, headers and other information from a URL.
 
-[Steampipe](https://steampipe.io) is an open source CLI to instantly query cloud APIs using SQL.
+[Steampipe](https://steampipe.io) is an open-source zero-ETL engine to instantly query cloud APIs using SQL.
 
 Search website scans:
 
@@ -98,7 +99,4 @@ connection "urlscan" {
 
 - `api_key` - Your urlscan.io API key.
 
-## Get involved
 
-- Open source: https://github.com/turbot/steampipe-plugin-urlscan
-- Community: [Join #steampipe on Slack →](https://turbot.com/community/join)
