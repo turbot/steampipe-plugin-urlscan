@@ -1,14 +1,13 @@
 module github.com/turbot/steampipe-plugin-urlscan
 
 go 1.21.0
-
-toolchain go1.21.1
+toolchain go1.22.5
 
 replace github.com/m-mizutani/urlscan-go => github.com/e-gineer/urlscan-go v1.0.1-0.20210701205010-6cf8288d0d10
 
 require (
 	github.com/m-mizutani/urlscan-go v1.0.0
-	github.com/turbot/steampipe-plugin-sdk/v5 v5.10.1
+	github.com/turbot/steampipe-plugin-sdk/v5 v5.10.3
 )
 
 require (
