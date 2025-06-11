@@ -8,7 +8,7 @@ replace github.com/m-mizutani/urlscan-go => github.com/e-gineer/urlscan-go v1.0.
 
 require (
 	github.com/m-mizutani/urlscan-go v1.0.0
-	github.com/turbot/steampipe-plugin-sdk/v5 v5.11.6
+	github.com/turbot/steampipe-plugin-sdk/v5 v5.11.7
 )
 
 require (
