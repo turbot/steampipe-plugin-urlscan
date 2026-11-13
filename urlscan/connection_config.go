@@ -1,7 +1,7 @@
 package urlscan
 
 import (
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin"
 )
 
 type urlscanConfig struct {
@@ -14,9 +14,9 @@ func ConfigInstance() interface{} {
 
 // GetConfig :: retrieve and cast connection config from query data
 func GetConfig(connection *plugin.Connection) urlscanConfig {
-	if connection == nil || connection.Config == nil {
+	if connection == nil || connection.GetConfig() == nil {
 		return urlscanConfig{}
 	}
-	config, _ := connection.Config.(urlscanConfig)
+	config, _ := connection.GetConfig().(urlscanConfig)
 	return config
 }
